@@ -10,17 +10,18 @@ namespace DragAndDrop
         [SerializeField] private Image _fillImage;
         [SerializeField] private Gradient _colorGradient;
 
-        private float _currentFillSpeed;
+        private float _menaceMultiplicator;
+        private float _currentModifier;
         private CancellationTokenSource _cancellationToken;
 
-        public void InitFillAmount(float fillAmount)
+        public void InitFillAmount(float menaceMultiplicator)
         {
-            _fillImage.fillAmount = fillAmount / 100;
+            _menaceMultiplicator = menaceMultiplicator;
         }
 
         public void SetFillSpeed(float menaceMultiplicator)
         {
-            _currentFillSpeed = menaceMultiplicator;
+            _currentModifier = menaceMultiplicator;
 
             CancelTask();
 
@@ -45,7 +46,7 @@ namespace DragAndDrop
                 if (cancellationToken.IsCancellationRequested)
                     return;
 
-                _fillImage.fillAmount += _currentFillSpeed * Time.deltaTime /100;
+                _fillImage.fillAmount += _menaceMultiplicator * Time.deltaTime /100;
 
                 _fillImage.color = _colorGradient.Evaluate(_fillImage.fillAmount);
 

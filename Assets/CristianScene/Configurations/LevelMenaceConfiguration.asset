@@ -18,17 +18,17 @@ MonoBehaviour:
     _menaceMultiplicator: 15
     _menaceGameTime: 29
     _menaceImage: {fileID: 0}
-  - _menaceType: 0
+  - _menaceType: 1
     _startingTime: 50
     _menaceMultiplicator: 10
     _menaceGameTime: 25
     _menaceImage: {fileID: 0}
-  - _menaceType: 1
+  - _menaceType: 2
     _startingTime: 10
     _menaceMultiplicator: 40
     _menaceGameTime: 20
     _menaceImage: {fileID: 0}
-  - _menaceType: 0
+  - _menaceType: 3
     _startingTime: 15
     _menaceMultiplicator: 2
     _menaceGameTime: 10
