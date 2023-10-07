@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Menace;
+using UnityEngine;
 
 namespace Efficiency
 {
@@ -7,8 +8,9 @@ namespace Efficiency
     {
         [SerializeField] private MenaceType _menaceType;
         [SerializeField] private float _efficiencyModificator;
+        [SerializeField] private bool _isKnowed;
         public MenaceType MenaceType => _menaceType;
-
         public float EfficiencyModificator => _efficiencyModificator;
+        public bool IsKnowed => _isKnowed;
     }
 }

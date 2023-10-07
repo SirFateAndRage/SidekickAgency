@@ -1,4 +1,4 @@
-﻿namespace Efficiency
+﻿namespace Menace
 {
     public enum MenaceType
     {

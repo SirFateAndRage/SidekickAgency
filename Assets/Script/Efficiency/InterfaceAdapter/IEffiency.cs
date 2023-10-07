@@ -1,4 +1,6 @@
-﻿namespace Efficiency
+﻿using Menace;
+
+namespace Efficiency
 {
     public interface IEffiency
     {

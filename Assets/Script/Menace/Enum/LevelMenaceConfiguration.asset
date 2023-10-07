@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: LevelMenaceConfiguration
+  m_EditorClassIdentifier: Assembly-CSharp:Menace:LevelMenaceConfiguration
+  _menaceStructure:
+  - _menaceType: 0
+    _startingTime: 30
+    _menaceMultiplicator: 15
+    _menaceGameTime: 29
+    _menaceImage: {fileID: 0}
+  - _menaceType: 0
+    _startingTime: 50
+    _menaceMultiplicator: 10
+    _menaceGameTime: 25
+    _menaceImage: {fileID: 0}
+  - _menaceType: 1
+    _startingTime: 10
+    _menaceMultiplicator: 40
+    _menaceGameTime: 20
+    _menaceImage: {fileID: 0}
+  - _menaceType: 0
+    _startingTime: 15
+    _menaceMultiplicator: 2
+    _menaceGameTime: 10
+    _menaceImage: {fileID: 0}
