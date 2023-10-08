@@ -5,6 +5,9 @@
        Fires,
        Kayjus,
        Delicuency,
-       Accident
+       Accident,
+       Earthquake,
+       Aliens,
+       Zombies
     }
 }
