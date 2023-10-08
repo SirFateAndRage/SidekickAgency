@@ -24,12 +24,18 @@ namespace DragAndDrop
         private HashSet<IScope> _scopeList = new HashSet<IScope>();
         private IScope _currentScope;
         private IEffectiveEmotes _effectiveEmotes;
+        HeroController _heroController;
+
+        private void Awake()
+        {
+            _heroController = FindObjectOfType<HeroController>();
+        }
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("OnBeginDrag");
             _canvasGroup.alpha = .6f;
             _canvasGroup.blocksRaycasts = false;
-            FindObjectOfType<HeroController>().SpawnHero();
+            _heroController.SpawnHero();
         }
 
         public void OnDrag(PointerEventData eventData)
