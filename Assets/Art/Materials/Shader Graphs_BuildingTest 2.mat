@@ -19,16 +19,19 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Tiling
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
     - _Power: 0.22
+    - _ShadowLines: 200
+    - _StitchWorldSpace: 0
     m_Colors:
     - _Color: {r: 0.8, g: 0.76090586, b: 0.56078434, a: 0}
     - _ColorB: {r: 0.9339623, g: 0.8917852, b: 0.6123621, a: 0}
+    - _ScreenSpaceTiling: {r: 3, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4054408009494101446
 MonoBehaviour:
