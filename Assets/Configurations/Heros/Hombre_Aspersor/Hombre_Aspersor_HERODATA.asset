@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e601da3c105854f86ae8f4f1cb5c5e, type: 3}
   m_Name: Hombre_Aspersor_HERODATA
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 21300000, guid: a58ca8a523708284984ab9224b9fef14, type: 3}
+  _sprite: {fileID: 21300000, guid: f53bc4aa10ee07640acb3b8a93c4127b, type: 3}
   _name: El hombre aspersor
   _description: "Roc\xEDa agua levemente de sus manos de aspersor."
