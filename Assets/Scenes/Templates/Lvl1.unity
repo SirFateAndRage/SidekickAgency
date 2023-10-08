@@ -4852,7 +4852,7 @@ Transform:
   m_GameObject: {fileID: 559336218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.897, y: 3.638, z: 2.881}
+  m_LocalPosition: {x: 4.361, y: 4.065, z: 3.263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8946,10 +8946,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 705036479}
     m_Modifications:
+    - target: {fileID: 1930861079185617711, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1458163833}
+    - target: {fileID: 1930861079185617711, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 705036478}
     - target: {fileID: 2475909569196776244, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
       propertyPath: m_Name
       value: Mujer_Siesta
       objectReference: {fileID: 0}
+    - target: {fileID: 7959916801977697709, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
+      propertyPath: _myRectTransform
+      value: 
+      objectReference: {fileID: 1096704133}
+    - target: {fileID: 7959916801977697709, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
+      propertyPath: _mySpaceRectTransform
+      value: 
+      objectReference: {fileID: 1096704133}
     - target: {fileID: 9115533439917289982, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -14195,6 +14211,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9141673824540325422, guid: eb9e776a209b6b947a2eedb521c8e800, type: 3}
   m_PrefabInstance: {fileID: 1864334755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1867723499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867723501}
+  - component: {fileID: 1867723500}
+  m_Layer: 0
+  m_Name: PointerSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867723500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867723499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ef6ab2e70a7c64f8c4bf727abe9e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointer: {fileID: 2800000, guid: 0239f1f378e2c804791acf7bd307708e, type: 3}
+--- !u!4 &1867723501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867723499}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.675568, y: 117.14851, z: 0.14387506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1882473018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16801,6 +16862,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 49.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2068382602771373589, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
+      propertyPath: _myRectTransform
+      value: 
+      objectReference: {fileID: 1096704133}
+    - target: {fileID: 2068382602771373589, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
+      propertyPath: _mySpaceRectTransform
+      value: 
+      objectReference: {fileID: 2146554620}
     - target: {fileID: 3504126688949351069, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
       propertyPath: _camera
       value: 
@@ -16889,6 +16958,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7496482128146606231, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1458163833}
+    - target: {fileID: 7496482128146606231, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 705036478}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17427,3 +17504,4 @@ SceneRoots:
   - {fileID: 246290914}
   - {fileID: 1279465185}
   - {fileID: 1794892930}
+  - {fileID: 1867723501}
