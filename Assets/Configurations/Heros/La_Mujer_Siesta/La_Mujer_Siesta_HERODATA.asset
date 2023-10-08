@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e601da3c105854f86ae8f4f1cb5c5e, type: 3}
   m_Name: La_Mujer_Siesta_HERODATA
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _sprite: {fileID: 21300000, guid: e33053e4a3ba8cb4ea8fcc95201912f3, type: 3}
   _name: La mujer siesta
   _description: Se duerme
