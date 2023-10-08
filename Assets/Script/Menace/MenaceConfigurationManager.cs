@@ -95,7 +95,16 @@ namespace Menace
 
             GameObject effect = menaceStructure.CityEffect;
 
-            Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom).SetActive(true);
+            GameObject currentEffect = Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom);
+            currentEffect.SetActive(true);
+
+            currentEffect.TryGetComponent<IEffectExecution>(out IEffectExecution effectExecutor);
+
+            if(effectExecutor != null)
+            {
+                _menaceOutCome.SetEffect(menaceStructure.Id, effectExecutor);
+            }
+
 
 
             _menaceTransforms.RemoveAt(0);
