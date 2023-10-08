@@ -17,6 +17,12 @@ namespace DragAndDrop
         public void InitFillAmount(float menaceMultiplicator)
         {
             _menaceMultiplicator = menaceMultiplicator;
+            _currentModifier = _menaceMultiplicator;
+        }
+
+        public void Reset()
+        {
+            _fillImage.fillAmount = 0;
         }
 
         public void SetFillSpeed(float menaceMultiplicator)
@@ -46,7 +52,7 @@ namespace DragAndDrop
                 if (cancellationToken.IsCancellationRequested)
                     return;
 
-                _fillImage.fillAmount += _menaceMultiplicator * Time.deltaTime /100;
+                _fillImage.fillAmount += _currentModifier * Time.deltaTime /100;
 
                 _fillImage.color = _colorGradient.Evaluate(_fillImage.fillAmount);
 

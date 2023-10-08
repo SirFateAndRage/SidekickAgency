@@ -8,11 +8,3 @@ namespace Heroes
         [SerializeField] private string _description;
     }
 }
-
-namespace Menace
-{
-}
-
-namespace DragAndDrop
-{
-}

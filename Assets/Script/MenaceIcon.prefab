@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 2335915466474593418}
   - component: {fileID: 8642482522638335259}
   - component: {fileID: 1914406827616209723}
+  - component: {fileID: 4496703687169963406}
   m_Layer: 5
   m_Name: MenaceIcon
   m_TagString: Untagged
@@ -604,6 +605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 6607585211420864483}
+  _menaceIcon: {fileID: 8268510707072154367}
+  _initializeMenace: {fileID: 4496703687169963406}
 --- !u!65 &6081519498841760432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -693,6 +696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floatImage: {fileID: 5936275590988122319}
+  _menaceIcon: {fileID: 8268510707072154367}
+  _effectiveEmotes: {fileID: 1914406827616209723}
 --- !u!114 &2335915466474593418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +714,7 @@ MonoBehaviour:
   _menaceIcon: {fileID: 8268510707072154367}
   _menaceRecyclableObject: {fileID: 6839254776726420379}
   _effectiveEmotes: {fileID: 1914406827616209723}
+  _initHeroJob: {fileID: 4496703687169963406}
 --- !u!114 &8642482522638335259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,6 +745,19 @@ MonoBehaviour:
   - {fileID: 8287362960759410940}
   - {fileID: 8131273035557641239}
   - {fileID: 5324148171136316565}
+--- !u!114 &4496703687169963406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245356828208076959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b18334c6580a44fa2ffc0776c2d8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menaceIcon: {fileID: 8268510707072154367}
 --- !u!1 &6716033975330783432
 GameObject:
   m_ObjectHideFlags: 0
