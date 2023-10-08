@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e71a7ee534506f44b153b0e08e4f441, type: 3}
+  m_Name: GameplayTheme
+  m_EditorClassIdentifier: 
+  tracks:
+  - name: Intro
+    clip: {fileID: 8300000, guid: 19fe83c48894fd44e8a9382e6ed4b46d, type: 3}
+    loop: 0
+    loopLength: 0
+  - name: LoopFix
+    clip: {fileID: 8300000, guid: 921f2d64a2f1d8b4e8be18c0e1099a9e, type: 3}
+    loop: 0
+    loopLength: 0
+  - name: Loop
+    clip: {fileID: 8300000, guid: 3439d66d6a9575147afc4fb30f712344, type: 3}
+    loop: 1
+    loopLength: 0
