@@ -9,14 +9,16 @@ namespace DragAndDrop
     {
         private Hero _hero;
         private MenaceStructure _menaceStructure;
-        private MenaceIconFill _menaceIcon;
+        private MenaceIconFill _menaceIconFill;
+        private MenaceIcon _menaceIcon;
         public int Id => _menaceStructure.Id;
 
         public Hero Hero { get => _hero;}
 
-        public void Init(MenaceStructure menaceStructre,Hero hero,MenaceIconFill menaceIcon)
+        public void Init(MenaceStructure menaceStructre,Hero hero,MenaceIconFill menaceIconFill,MenaceIcon menaceIcon)
         {
             _menaceStructure = menaceStructre;
+            _menaceIconFill = menaceIconFill;
             _menaceIcon = menaceIcon;
             AddHero(hero);
         }
@@ -29,8 +31,9 @@ namespace DragAndDrop
             }
             _hero.Workinghero(false);
             _hero = null;
+            _menaceIcon.OnNoHero();
 
-            _menaceIcon.SetFillSpeed(_menaceStructure.MenaceMultiplicator);
+            _menaceIconFill.SetFillSpeed(_menaceStructure.MenaceMultiplicator);
         }
 
         public void ChangeHero(Hero hero)
@@ -51,6 +54,8 @@ namespace DragAndDrop
                 _hero = hero;
                 _hero.Workinghero(true);
             }
+
+            _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
      
         }
 
@@ -60,6 +65,7 @@ namespace DragAndDrop
                 _hero = hero;
 
             _hero.Workinghero(true);
+            _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
 
         }
     }

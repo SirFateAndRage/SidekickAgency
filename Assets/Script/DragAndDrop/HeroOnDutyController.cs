@@ -9,7 +9,7 @@ namespace DragAndDrop
     {
         private List<JobInProgress> _jobInProgress = new List<JobInProgress>();
 
-        public void SetHeroToWork(Hero hero, MenaceStructure menaceStructure,MenaceIconFill menaceIcon)
+        public void SetHeroToWork(Hero hero, MenaceStructure menaceStructure,MenaceIconFill menaceIconFill,MenaceIcon menaceIcon)
         {
             RemoveHeroFromWork(hero);
 
@@ -29,7 +29,7 @@ namespace DragAndDrop
 
 
             _jobInProgress.Add(jobInProgres);
-            jobInProgres.Init(menaceStructure, hero,menaceIcon);
+            jobInProgres.Init(menaceStructure, hero,menaceIconFill,menaceIcon);
         }
 
         public void RemoveHeroFromWork(Hero hero)

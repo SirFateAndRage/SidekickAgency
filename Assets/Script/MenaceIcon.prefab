@@ -503,7 +503,6 @@ GameObject:
   - component: {fileID: 5936275590988122319}
   - component: {fileID: 987982543561228202}
   - component: {fileID: 6081519498841760432}
-  - component: {fileID: 8268510707072154367}
   - component: {fileID: 521312894708397989}
   - component: {fileID: 6839254776726420379}
   - component: {fileID: 2335915466474593418}
@@ -630,19 +629,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6221924, y: 3.1587524, z: 1}
   m_Center: {x: -0.08013916, y: 0.09121704, z: 0}
---- !u!114 &8268510707072154367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5245356828208076959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31609adc24cf61b419ac63540f8fa5f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _imageCurrentImage: {fileID: 0}
 --- !u!114 &521312894708397989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,11 +669,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floatingImage: {fileID: 5936275590988122319}
-  _menaceIconFill: {fileID: 0}
+  _menaceIconFill: {fileID: 5854580298774811859}
   _menaceRecyclableObject: {fileID: 6839254776726420379}
   _effectiveEmotes: {fileID: 1914406827616209723}
   _initHeroJob: {fileID: 4496703687169963406}
-  _menaceIcon: {fileID: 8268510707072154367}
+  _menaceIcon: {fileID: 5848655595362561665}
 --- !u!114 &8642482522638335259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b18334c6580a44fa2ffc0776c2d8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menaceIcon: {fileID: 5854580298774811859}
+  _menaceIconFill: {fileID: 5854580298774811859}
+  _menaceIcon: {fileID: 5848655595362561665}
 --- !u!114 &5854580298774811859
 MonoBehaviour:
   m_ObjectHideFlags: 0

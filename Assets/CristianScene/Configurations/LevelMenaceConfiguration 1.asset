@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791c04af8f1f4374e919be7f9199c32a, type: 3}
   m_Name: LevelMenaceConfiguration 1
   m_EditorClassIdentifier: 
-  _menaceStructure: []
+  _menaceStructure:
+  - _id: 1
+    _menaceType: 0
+    _startingTime: 30
+    _menaceMultiplicator: 50
+    _menaceGameTime: 20
+    _menaceImage: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - _id: 2
+    _menaceType: 1
+    _startingTime: 12
+    _menaceMultiplicator: 34
+    _menaceGameTime: 19
+    _menaceImage: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
