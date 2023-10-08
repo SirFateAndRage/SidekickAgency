@@ -26,7 +26,6 @@ namespace DragAndDrop
         {
             if (eventData.pointerDrag != null)
             {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = _rectTransform.anchoredPosition;
 
                 Hero hero = eventData.pointerDrag.GetComponent<Hero>();
 

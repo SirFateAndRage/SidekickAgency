@@ -121,6 +121,10 @@ namespace DragAndDrop
                     // Llama a la función de drop
                     dropHandler.OnDrop(eventData);
                 }
+                else
+                {
+                    dropHandler.OnDrop(null);
+                }
             }
 
 
