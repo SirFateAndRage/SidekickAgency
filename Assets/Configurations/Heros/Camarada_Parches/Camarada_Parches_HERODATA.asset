@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e601da3c105854f86ae8f4f1cb5c5e, type: 3}
   m_Name: Camarada_Parches_HERODATA
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 21300000, guid: 5224293b8a5dcc34f88761fe84b48bde, type: 3}
-  _name: King Size
-  _description: "Se transforma en un colch\xF3n tama\xF1o familiar."
+  _sprite: {fileID: 21300000, guid: 2eb3838f3f38c9047afecd13d88cf7a4, type: 3}
+  _name: Camarada Parches
+  _description: Emparcha ya!
