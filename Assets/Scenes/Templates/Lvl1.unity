@@ -1314,6 +1314,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1251341282}
     - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
+      propertyPath: _lifeController
+      value: 
+      objectReference: {fileID: 1905537852}
+    - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _becierTransform
       value: 
       objectReference: {fileID: 2005502991}
@@ -16953,6 +16957,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1888307044772824359, guid: 109ed467c3acc4041b0c36154f9ddb0e, type: 3}
   m_PrefabInstance: {fileID: 1894220152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1905537852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3477281365891393197, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
+  m_PrefabInstance: {fileID: 81411190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4478df8959d691a4e81c5af1847ae333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1912391153
 PrefabInstance:
   m_ObjectHideFlags: 0
