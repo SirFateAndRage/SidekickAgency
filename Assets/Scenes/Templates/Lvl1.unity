@@ -1285,6 +1285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMotor
       objectReference: {fileID: 0}
+    - target: {fileID: 6451925155377843741, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8670604226186669275, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

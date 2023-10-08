@@ -7,6 +7,20 @@ using UnityEngine;
 
 namespace Menace
 {
+    [System.Serializable]
+    public struct HeroActivation
+    {
+        [SerializeField] GameObject _heroContainer;
+        [SerializeField] private float TimeToShow;
+
+        public GameObject HeroContainer { get => _heroContainer;}
+        public float TimeToShow1 { get => TimeToShow;}
+    }
+    public class HeroActivator : MonoBehaviour
+    {
+        [SerializeField]
+        private List<HeroActivation> _heroActivation;
+    }
     public class MenaceConfigurationManager : MonoBehaviour
     {
         [SerializeField] private LevelMenaceConfiguration _levelMenaceConfiguration;
