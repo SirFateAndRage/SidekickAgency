@@ -7,7 +7,7 @@ namespace DragAndDrop
 {
     public class InitializeHeroJob : MonoBehaviour
     {
-        [SerializeField] private MenaceIcon _menaceIcon;
+        [SerializeField] private MenaceIconFill _menaceIcon;
 
         private HeroOnDutyController _heroOnDutyController;
 

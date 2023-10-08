@@ -9,11 +9,13 @@ namespace Heroes
     {
         private int _id = -1;
         [SerializeField] private HeroEfficiencyConfiguration _configuration;
+        [SerializeField] private HeroDataConfiguration _heroDataConfig;
         [SerializeField] private CanvasGroup _canvasGroup;
         private List<IEffiency> _heroEffeciency;
 
         public List<IEffiency> HeroEffeciency { get => _heroEffeciency;}
         public int Id { get => _id; set => _id = value; }
+        public HeroDataConfiguration HeroDataConfig { get => _heroDataConfig;}
 
         private void Awake()
         {

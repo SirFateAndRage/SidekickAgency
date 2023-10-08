@@ -9,12 +9,12 @@ namespace DragAndDrop
     {
         private Hero _hero;
         private MenaceStructure _menaceStructure;
-        private MenaceIcon _menaceIcon;
+        private MenaceIconFill _menaceIcon;
         public int Id => _menaceStructure.Id;
 
         public Hero Hero { get => _hero;}
 
-        public void Init(MenaceStructure menaceStructre,Hero hero,MenaceIcon menaceIcon)
+        public void Init(MenaceStructure menaceStructre,Hero hero,MenaceIconFill menaceIcon)
         {
             _menaceStructure = menaceStructre;
             _menaceIcon = menaceIcon;

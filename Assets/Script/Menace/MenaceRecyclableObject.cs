@@ -7,7 +7,7 @@ namespace Menace
     public class MenaceRecyclableObject : RecyclableObject
     {
         [SerializeField] private FloatingImage _floatImage;
-        [SerializeField] private MenaceIcon _menaceIcon;
+        [SerializeField] private MenaceIconFill _menaceIcon;
         [SerializeField] private EffectivesEmotes _effectiveEmotes;
         public override void OnRecycle()
         {

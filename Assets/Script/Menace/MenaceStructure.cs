@@ -12,13 +12,14 @@ namespace Menace
         [SerializeField] private float _startingTime;
         [SerializeField] private float _menaceMultiplicator;
         [SerializeField] private float _menaceGameTime;
-        [SerializeField] private Image _menaceImage;
+        [SerializeField] private Sprite _menaceImage;
 
         public MenaceType MenaceType { get => _menaceType;}
         public float StartingTime { get => _startingTime;}
         public float MenaceMultiplicator { get => _menaceMultiplicator;}
         public float MenaceGameTime { get => _menaceGameTime;}
         public int Id { get => _id;}
+        public Sprite MenaceSprite { get => _menaceImage;}
     }
 
 }

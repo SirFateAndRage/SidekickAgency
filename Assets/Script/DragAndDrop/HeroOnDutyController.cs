@@ -9,7 +9,7 @@ namespace DragAndDrop
     {
         private List<JobInProgress> _jobInProgress = new List<JobInProgress>();
 
-        public void SetHeroToWork(Hero hero, MenaceStructure menaceStructure,MenaceIcon menaceIcon)
+        public void SetHeroToWork(Hero hero, MenaceStructure menaceStructure,MenaceIconFill menaceIcon)
         {
             RemoveHeroFromWork(hero);
 
