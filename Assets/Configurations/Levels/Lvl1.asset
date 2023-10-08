@@ -21,16 +21,30 @@ MonoBehaviour:
     _menaceImage: {fileID: 21300000, guid: 502fb880b87a6344fa11dbf6ef133289, type: 3}
     _cityEffect: {fileID: 5437913446609533403, guid: e25835b83f0a0ab4ba839dd7f041e0ce, type: 3}
   - _id: 2
-    _menaceType: 5
-    _startingTime: 40
-    _menaceMultiplicator: 3
-    _menaceGameTime: 118
-    _menaceImage: {fileID: 21300000, guid: 1f2f8609c22efff41a8ad4a0e03f92e9, type: 3}
-    _cityEffect: {fileID: 3380585893558368908, guid: b07df32b06b11f641a935aaad0fd61e8, type: 3}
-  - _id: 3
     _menaceType: 6
     _startingTime: 40
     _menaceMultiplicator: 3
     _menaceGameTime: 117
     _menaceImage: {fileID: 21300000, guid: 6974b215a0e771245ab2a1d1dcf646c4, type: 3}
     _cityEffect: {fileID: 3899098015164778246, guid: fd3df35454b32d0499e7178d216e87b1, type: 3}
+  - _id: 3
+    _menaceType: 5
+    _startingTime: 20
+    _menaceMultiplicator: 4
+    _menaceGameTime: 105
+    _menaceImage: {fileID: 21300000, guid: 1f2f8609c22efff41a8ad4a0e03f92e9, type: 3}
+    _cityEffect: {fileID: 3380585893558368908, guid: b07df32b06b11f641a935aaad0fd61e8, type: 3}
+  - _id: 4
+    _menaceType: 6
+    _startingTime: 40
+    _menaceMultiplicator: 3
+    _menaceGameTime: 95
+    _menaceImage: {fileID: 21300000, guid: 6974b215a0e771245ab2a1d1dcf646c4, type: 3}
+    _cityEffect: {fileID: 3899098015164778246, guid: fd3df35454b32d0499e7178d216e87b1, type: 3}
+  - _id: 5
+    _menaceType: 2
+    _startingTime: 40
+    _menaceMultiplicator: 3
+    _menaceGameTime: 95
+    _menaceImage: {fileID: 21300000, guid: 258c868672e4aae4ab4209ffa91c2011, type: 3}
+    _cityEffect: {fileID: 9027104787101451504, guid: 2fee17b6ca173944e83aec02ed1b2a65, type: 3}

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using System.Linq;
 
 public class HeroController : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class HeroController : MonoBehaviour
         _hero.transform.position = _heroSpawnPoint.position;
         _hero.GetComponent<Animator>().Play("Flying");
 
+        StopAllCoroutines();
         StartCoroutine(HeroAppearSequence());
     }
 
@@ -27,6 +30,7 @@ public class HeroController : MonoBehaviour
         _heroFollowsMouse = false;
         _hero.GetComponent<Animator>().Play("Flying");
 
+        StopAllCoroutines();
         StartCoroutine(HeroTravelSequence());
     }
 
@@ -34,6 +38,7 @@ public class HeroController : MonoBehaviour
     {
         _heroFollowsMouse = false;
         
+        StopAllCoroutines();
         StartCoroutine(HeroLeaveSequence());
     }
 
@@ -42,18 +47,18 @@ public class HeroController : MonoBehaviour
         if(!_heroFollowsMouse)
             return;   
 
-        _hero.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f;
+        _hero.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f  - _hero.transform.up * .5f;
         _bezierPoint1 = _hero.transform;
     }
 
     IEnumerator HeroAppearSequence()
     {
-        Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f;
+        Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f - _hero.transform.up * .5f;
         float timeToLerp = 0;
 
         while(Vector3.Distance(_hero.transform.position, clickPoint) > 0)
         {
-            clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f;
+            clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f - _hero.transform.up * .5f;
             _hero.transform.position = Vector3.Lerp(_heroSpawnPoint.position, clickPoint, timeToLerp);
             yield return null;
             timeToLerp += Time.deltaTime * 1.5f;
@@ -68,15 +73,12 @@ public class HeroController : MonoBehaviour
         Vector3 heroLastPos = _hero.transform.position;
         float timeToLerp = 0;
 
-
-        while(Vector3.Distance(_hero.transform.position, _heroSpawnPoint.position) > 0)
+        while(Vector3.Distance(_hero.transform.position, _heroSpawnPoint.position) > .5f)
         {
             _hero.transform.position = Vector3.Lerp(heroLastPos, _heroSpawnPoint.position, timeToLerp);
             yield return null;
             timeToLerp += Time.deltaTime;
         }
-
-        _hero.SetActive(false);
     }
 
     IEnumerator HeroTravelSequence()
@@ -86,7 +88,10 @@ public class HeroController : MonoBehaviour
 
         _hero.GetComponent<AudioSource>().Play();
 
-        while(Vector3.Distance(_hero.transform.position, _bezierPoint3.position) > 0)
+        List<Transform> allBeziers = new List<Transform> { _bezierPoint1, _bezierPoint2, _bezierPoint3 };
+
+
+        while(Vector3.Distance(_hero.transform.position, _bezierPoint3.position) > .5f)
         {
             _hero.transform.position = Vector3.Lerp(Vector3.Lerp(_bezierPoint1.position, _bezierPoint2.position, timeToLerp), Vector3.Lerp(_bezierPoint2.position, _bezierPoint3.position, timeToLerp), timeToLerp);
             yield return null;
