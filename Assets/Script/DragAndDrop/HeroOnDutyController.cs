@@ -2,52 +2,9 @@
 using Menace;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace DragAndDrop
 {
-    public class LifeController : MonoBehaviour
-    {
-        [SerializeField] List<Image> _lifes;
-
-        public void RemoveLife()
-        {
-            if (_lifes.Count < 0)
-                return;
-
-            _lifes[0].enabled = false;
-            _lifes.RemoveAt(0);
-
-            if(_lifes.Count <= 0)
-            {
-                //hacer la pantalla de derrota easy peasy
-            }
-        }
-    }
-
-    public class MenaceOutCome : MonoBehaviour
-    {
-        [SerializeField] HeroOnDutyController _heroOnDutyController;
-        [SerializeField] LifeController _lifeController;
-
-
-        public void MenaceDefeted(int idMenace)
-        {
-            _heroOnDutyController.TaskCompleted(idMenace);
-
-            //usar el id para hacer aparecer los string en el canal de texto
-
-        }
-
-        public void MenaceLost(int idMenace)
-        {
-            _heroOnDutyController.TaskCompleted(idMenace);
-            _lifeController.RemoveLife();
-
-            //usar el id para hacer aparecer los string en el canal de texto
-
-        }
-    }
     public class HeroOnDutyController : MonoBehaviour
     {
         private List<JobInProgress> _jobInProgress = new List<JobInProgress>();

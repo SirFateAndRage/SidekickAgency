@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using Menace;
+using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,16 +10,21 @@ namespace DragAndDrop
     {
         [SerializeField] private Image _fillImage;
         [SerializeField] private Gradient _colorGradient;
+        [SerializeField] private MenaceRecyclableObject _menaceRecyclable;
 
         private float _menaceMultiplicator;
         private float _currentModifier;
         private CancellationTokenSource _cancellationToken;
         private MenaceOutCome _menaceOutCome;
 
-        public void InitFillAmount(float menaceMultiplicator)
+        private int _menaceId;
+
+        public void InitFillAmount(float menaceMultiplicator, int menaceId,MenaceOutCome menaceOutCome)
         {
             _menaceMultiplicator = menaceMultiplicator;
             _currentModifier = _menaceMultiplicator;
+            _menaceOutCome = menaceOutCome;
+            _menaceId = menaceId;
         }
 
         public void Reset()
@@ -60,12 +66,16 @@ namespace DragAndDrop
 
                 if (_fillImage.fillAmount >= 1f)
                 {
-                    //avisar que se completó a alguin
+                    CancelTask();
+                    _menaceOutCome.MenaceLost(_menaceId);
+                    _menaceRecyclable.Recycle();
                 }
 
                 if (_fillImage.fillAmount <= 0f)
                 {
-                    //avisar que se completó a alguin
+                    CancelTask();
+                    _menaceOutCome.MenaceDefeted(_menaceId);
+                    _menaceRecyclable.Recycle();
                 }
 
                 await Task.Yield();

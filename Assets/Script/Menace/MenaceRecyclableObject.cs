@@ -15,7 +15,6 @@ namespace Menace
             _floatImage.Reset();
             _menaceIcon.Reset();
             _effectiveEmotes.Reset();
-            Recycle();
         }
 
         public override void OnRevived()

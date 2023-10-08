@@ -16,6 +16,7 @@ namespace Menace
         [SerializeField] private MenaceRecyclableObject _menaceObject;
         [SerializeField] private List<Transform> _buildingTransform;
         [SerializeField] private HeroOnDutyController _heroOnDutyController;
+        [SerializeField] private MenaceOutCome _menaceOutCome;
 
         private IObjectPool _menacePool;
         private float _menaceTimeSpawner;
@@ -78,7 +79,7 @@ namespace Menace
 
             menaceObject.TryGetComponent(out MenaceInitConfigurator configurator);
 
-            configurator.InitIcon(menaceStructure, _camera, currentBuilding,_heroOnDutyController);
+            configurator.InitIcon(menaceStructure, _camera, currentBuilding,_heroOnDutyController,_menaceOutCome);
 
         }
     }
