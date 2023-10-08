@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad11fc3d06c99e4e85bc6a870f16e62, type: 3}
+  m_Name: La_Mujer_Siesta_EfficiencyData
+  m_EditorClassIdentifier: 
+  _efficiencylist:
+  - _menaceType: 0
+    _efficiencyModificator: 2
+    _isKnowed: 0
+  - _menaceType: 2
+    _efficiencyModificator: 0
+    _isKnowed: 1
+  - _menaceType: 3
+    _efficiencyModificator: 2
+    _isKnowed: 0
+  - _menaceType: 4
+    _efficiencyModificator: 2
+    _isKnowed: 0
+  - _menaceType: 5
+    _efficiencyModificator: 0
+    _isKnowed: 0
+  - _menaceType: 6
+    _efficiencyModificator: -2
+    _isKnowed: 0
