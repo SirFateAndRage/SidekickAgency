@@ -83,8 +83,8 @@ namespace Menace
 
             Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom).gameObject.SetActive(true);
 
-            
-            _buildingTransform.RemoveAt(0);
+
+            _menaceTransforms.RemoveAt(0);
 
             menaceObject.TryGetComponent(out MenaceInitConfigurator configurator);
 
