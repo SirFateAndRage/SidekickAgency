@@ -7,6 +7,8 @@ namespace DragAndDrop
     public class LifeController : MonoBehaviour
     {
         [SerializeField] List<Image> _lifes;
+        [SerializeField] GameObject _badEndGame;
+        [SerializeField] GameObject _winGame;
 
         private int _count;
 
@@ -24,8 +26,15 @@ namespace DragAndDrop
 
             if(_count<= 0)
             {
-                //hacer la pantalla de derrota easy peasy
+                _badEndGame.SetActive(true);
             }
+        }
+
+        public void Win()
+        {
+            if (_count <= 0)
+                return;
+            _winGame.SetActive(true);
         }
     }
 }

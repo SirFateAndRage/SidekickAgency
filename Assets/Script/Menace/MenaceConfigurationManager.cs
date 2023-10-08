@@ -23,6 +23,7 @@ namespace Menace
     }
     public class MenaceConfigurationManager : MonoBehaviour
     {
+        [SerializeField] private LifeController _lifeController;
         [SerializeField] private LevelMenaceConfiguration _levelMenaceConfiguration;
         [SerializeField] private float _levelTime;
 
@@ -112,9 +113,12 @@ namespace Menace
             }
 
 
-            if (!_menaceExist)
-                return;
             if (_levelTime <= 0)
+            {
+                _lifeController.Win();
+                return;
+            }
+            if (!_menaceExist)
                 return;
 
 
