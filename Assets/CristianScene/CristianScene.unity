@@ -810,10 +810,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorlSpace_canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3701517458184090549, guid: 3befdac93339b164392802af111e04de, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1802001998}
     - target: {fileID: 6187019423052174476, guid: 3befdac93339b164392802af111e04de, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1061,6 +1057,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444843708290298848, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 1802001998}
     - target: {fileID: 2335925376041260157, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_Name
       value: ScreenSpace_canvas
@@ -1144,10 +1144,6 @@ PrefabInstance:
     - target: {fileID: 8475834094022491702, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9199083193231221053, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
-      propertyPath: m_Name
-      value: HeroContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

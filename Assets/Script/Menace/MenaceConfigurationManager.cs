@@ -15,6 +15,7 @@ namespace Menace
 
         [SerializeField] private MenaceRecyclableObject _menaceObject;
         [SerializeField] private List<Transform> _buildingTransform;
+        [SerializeField] private List<MenaceTransform> _menaceTransforms = new List<MenaceTransform>();
         [SerializeField] private HeroOnDutyController _heroOnDutyController;
         [SerializeField] private MenaceOutCome _menaceOutCome;
 
@@ -74,7 +75,15 @@ namespace Menace
 
             menaceObject.transform.parent = _WorldSpaceCanvas;
 
-            Transform currentBuilding = _buildingTransform[0];
+            Transform currentBuilding = _menaceTransforms[0].IconToPlaceMenace;
+
+            Transform effectTransfrom = _menaceTransforms[0].PlaceToPutEffect;
+
+            GameObject effect = menaceStructure.CityEffect;
+
+            Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom).gameObject.SetActive(true);
+
+            
             _buildingTransform.RemoveAt(0);
 
             menaceObject.TryGetComponent(out MenaceInitConfigurator configurator);
