@@ -19,6 +19,46 @@ namespace DragAndDrop
             Reset();
         }
 
+        public void DiscoverEfficiency(List<IEffiency> effiencyList)
+        {
+            Reset();
+
+            foreach (var item in effiencyList)
+            {
+                Effiency efficiency = item.GetEffeciency();
+
+                if (efficiency.MenaceType1 != _menaceStructure.MenaceType)
+                    continue;
+
+                if (!efficiency.IsKnowed)
+                {
+                    efficiency.IsKnowed = true;
+
+                }
+
+                if (efficiency.EfficiencyModificator > _menaceStructure.MenaceMultiplicator)
+                {
+                    _images[2].enabled = true;
+                    return;
+                }
+
+
+                if (efficiency.EfficiencyModificator == 0)
+                {
+                    _images[1].enabled = true;
+                    return;
+                }
+
+                if (efficiency.EfficiencyModificator < 0)
+                {
+                    _images[0].enabled = true;
+                    return;
+                }
+
+            }
+
+        }
+
         public void SetEmote(List<IEffiency> effiencyList)
         {
             foreach (var item in effiencyList)
