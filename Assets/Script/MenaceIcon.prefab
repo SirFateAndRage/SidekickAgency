@@ -509,6 +509,9 @@ GameObject:
   - component: {fileID: 2335915466474593418}
   - component: {fileID: 8642482522638335259}
   - component: {fileID: 1914406827616209723}
+  - component: {fileID: 4496703687169963406}
+  - component: {fileID: 5854580298774811859}
+  - component: {fileID: 5848655595362561665}
   m_Layer: 5
   m_Name: MenaceIcon
   m_TagString: Untagged
@@ -604,6 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 6607585211420864483}
+  _menaceIcon: {fileID: 0}
+  _initializeMenace: {fileID: 4496703687169963406}
 --- !u!65 &6081519498841760432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -637,37 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31609adc24cf61b419ac63540f8fa5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillImage: {fileID: 9173660993188253123}
-  _colorGradient:
-    serializedVersion: 2
-    key0: {r: 0.4944886, g: 0.827451, b: 0.3309804, a: 1}
-    key1: {r: 0.49799994, g: 0.83, b: 0.332, a: 1}
-    key2: {r: 1, g: 0.9722222, b: 0, a: 0}
-    key3: {r: 0.9716981, g: 0.9501048, b: 0, a: 0}
-    key4: {r: 1, g: 0.42588234, b: 0.39999998, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 15806
-    ctime2: 21974
-    ctime3: 33924
-    ctime4: 60909
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 5
-    m_NumAlphaKeys: 2
+  _imageCurrentImage: {fileID: 0}
 --- !u!114 &521312894708397989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,6 +668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floatImage: {fileID: 5936275590988122319}
+  _menaceIcon: {fileID: 5854580298774811859}
+  _effectiveEmotes: {fileID: 1914406827616209723}
 --- !u!114 &2335915466474593418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,9 +683,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floatingImage: {fileID: 5936275590988122319}
-  _menaceIcon: {fileID: 8268510707072154367}
+  _menaceIconFill: {fileID: 0}
   _menaceRecyclableObject: {fileID: 6839254776726420379}
   _effectiveEmotes: {fileID: 1914406827616209723}
+  _initHeroJob: {fileID: 4496703687169963406}
+  _menaceIcon: {fileID: 8268510707072154367}
 --- !u!114 &8642482522638335259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,6 +718,75 @@ MonoBehaviour:
   - {fileID: 8287362960759410940}
   - {fileID: 8131273035557641239}
   - {fileID: 5324148171136316565}
+--- !u!114 &4496703687169963406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245356828208076959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b18334c6580a44fa2ffc0776c2d8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menaceIcon: {fileID: 5854580298774811859}
+--- !u!114 &5854580298774811859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245356828208076959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df14365634088334d83674416d8bd22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fillImage: {fileID: 9173660993188253123}
+  _colorGradient:
+    serializedVersion: 2
+    key0: {r: 0.49799994, g: 0.83, b: 0.332, a: 1}
+    key1: {r: 0.4944886, g: 0.827451, b: 0.3309804, a: 1}
+    key2: {r: 1, g: 0.9722222, b: 0, a: 0}
+    key3: {r: 0.9716981, g: 0.9501048, b: 0, a: 0}
+    key4: {r: 1, g: 0.42588234, b: 0.39999998, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 2120
+    ctime1: 11565
+    ctime2: 25829
+    ctime3: 31418
+    ctime4: 58789
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
+--- !u!114 &5848655595362561665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245356828208076959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31609adc24cf61b419ac63540f8fa5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageCurrentImage: {fileID: 5714985434747425433}
 --- !u!1 &6716033975330783432
 GameObject:
   m_ObjectHideFlags: 0

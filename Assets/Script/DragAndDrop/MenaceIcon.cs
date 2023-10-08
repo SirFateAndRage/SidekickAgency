@@ -1,72 +1,30 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace DragAndDrop
 {
     public class MenaceIcon : MonoBehaviour
     {
-        [SerializeField] private Image _fillImage;
-        [SerializeField] private Gradient _colorGradient;
+        [SerializeField] Image _imageCurrentImage;
 
-        private float _menaceMultiplicator;
-        private float _currentModifier;
-        private CancellationTokenSource _cancellationToken;
+        private Sprite _menaceSprite;
 
-        public void InitFillAmount(float menaceMultiplicator)
+
+        public void Init(Sprite menaceSprite)
         {
-            _menaceMultiplicator = menaceMultiplicator;
+            _imageCurrentImage.sprite = menaceSprite;
+            _menaceSprite = menaceSprite;
         }
 
-        public void SetFillSpeed(float menaceMultiplicator)
+        public void OnWorkingHeroe(Sprite heroSprite)
         {
-            _currentModifier = menaceMultiplicator;
-
-            CancelTask();
-
-            _cancellationToken = new CancellationTokenSource();
-
-            InitFill(_cancellationToken.Token);
-
+            _imageCurrentImage.sprite = heroSprite;
         }
 
-        private void CancelTask()
+        public void OnNoHero()
         {
-            if(_cancellationToken != null)
-            _cancellationToken.Cancel();
-
-            _cancellationToken = null;
+            _imageCurrentImage.sprite = _menaceSprite;
         }
 
-        private async void InitFill(CancellationToken cancellationToken)
-        {
-            while (true)
-            {
-                if (cancellationToken.IsCancellationRequested)
-                    return;
-
-                _fillImage.fillAmount += _menaceMultiplicator * Time.deltaTime /100;
-
-                _fillImage.color = _colorGradient.Evaluate(_fillImage.fillAmount);
-
-                if (_fillImage.fillAmount >= 1f)
-                {
-                    //avisar que se completó a alguin
-                }
-
-                if (_fillImage.fillAmount <= 0f)
-                {
-                    //avisar que se completó a alguin
-                }
-
-                await Task.Yield();
-            }
-        }
-
-        private void OnDestroy()
-        {
-            CancelTask();
-        }
     }
 }
