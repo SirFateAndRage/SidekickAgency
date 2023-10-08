@@ -11,13 +11,17 @@ namespace DragAndDrop
         [SerializeField] private EffectivesEmotes _effectiveEmotes;
         [SerializeField] private InitializeHeroJob _initHeroJob;
         [SerializeField] private MenaceIcon _menaceIcon;
+        [SerializeField] private HeroSlot _heroSlot;
 
         private HeroOnDutyController _heroOnDutyController;
         private MenaceStructure _menaceStructure;
 
 
-        public void InitIcon(MenaceStructure menaceStructure, Transform cameraTransform, Transform buildingTransform,HeroOnDutyController heroOnDutyController,MenaceOutCome menaceOutCome)
+        public void InitIcon(MenaceStructure menaceStructure, Transform cameraTransform, Transform buildingTransform,HeroOnDutyController heroOnDutyController,MenaceOutCome menaceOutCome
+            , HeroController heroController, Vector3 effectTransform, Transform becierTransform)
         {
+
+            _heroSlot.Initialize(heroController, effectTransform, becierTransform);
             _menaceStructure = menaceStructure;
             _heroOnDutyController = heroOnDutyController;
             _initHeroJob.Init(_menaceStructure,heroOnDutyController);

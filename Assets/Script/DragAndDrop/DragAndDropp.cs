@@ -128,7 +128,6 @@ namespace DragAndDrop
             hero.ReturnToPosition();
             ResetScope();
 
-            FindObjectOfType<HeroController>().SendHero();
         }
 
         public void OnPointerDown(PointerEventData eventData)

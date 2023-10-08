@@ -450,7 +450,6 @@ GameObject:
   - component: {fileID: 5936275590988122319}
   - component: {fileID: 987982543561228202}
   - component: {fileID: 6081519498841760432}
-  - component: {fileID: 521312894708397989}
   - component: {fileID: 6839254776726420379}
   - component: {fileID: 2335915466474593418}
   - component: {fileID: 8642482522638335259}
@@ -576,18 +575,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.6221924, y: 3.1587524, z: 1}
   m_Center: {x: -0.08013916, y: 0.09121704, z: 0}
---- !u!114 &521312894708397989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5245356828208076959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a8daedb195f1f40933ee7f11829751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6839254776726420379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +608,7 @@ MonoBehaviour:
   _effectiveEmotes: {fileID: 1914406827616209723}
   _initHeroJob: {fileID: 4496703687169963406}
   _menaceIcon: {fileID: 5848655595362561665}
+  _heroSlot: {fileID: 987982543561228202}
 --- !u!114 &8642482522638335259
 MonoBehaviour:
   m_ObjectHideFlags: 0
