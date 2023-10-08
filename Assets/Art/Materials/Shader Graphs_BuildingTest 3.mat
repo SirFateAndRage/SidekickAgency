@@ -31,6 +31,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Distance: 1
     - _Divide: 0.5
     - _HueDistance: 0
     - _Intensity: 0.1
@@ -45,7 +46,9 @@ Material:
     - _Color: {r: 0.56078434, g: 0.8, b: 0.6542175, a: 0}
     - _ColorB: {r: 0.56078434, g: 0.8, b: 0.7403175, a: 0}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}
+    - _Origin: {r: 0, g: 0, b: 0, a: 0}
     - _ScreenSpaceTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _SecondaryWindowsColor: {r: 1, g: 1, b: 1, a: 0}
     - _ShadowMinMax: {r: 0.5, g: 1, b: 0, a: 0}
     - _WindowsColor: {r: 1, g: 0.79683894, b: 0.08962262, a: 0}
   m_BuildTextureStacks: []
