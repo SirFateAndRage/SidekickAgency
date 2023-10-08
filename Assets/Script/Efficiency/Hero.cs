@@ -12,10 +12,12 @@ namespace Heroes
         [SerializeField] private HeroDataConfiguration _heroDataConfig;
         [SerializeField] private CanvasGroup _canvasGroup;
         private List<IEffiency> _heroEffeciency;
+        private bool _isWorking;
 
         public List<IEffiency> HeroEffeciency { get => _heroEffeciency;}
         public int Id { get => _id; set => _id = value; }
         public HeroDataConfiguration HeroDataConfig { get => _heroDataConfig;}
+        public bool IsWorking { get => _isWorking;}
 
         private void Awake()
         {
@@ -24,6 +26,8 @@ namespace Heroes
 
         public void Workinghero(bool isWorking)
         {
+            _isWorking = isWorking;
+
             if (isWorking)
             {
                 _canvasGroup.alpha = 0.5f;
