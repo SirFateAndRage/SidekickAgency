@@ -87,6 +87,6 @@ MonoBehaviour:
     _menaceType: 4
     _startingTime: 40
     _menaceMultiplicator: 3
-    _menaceGameTime: 48
+    _menaceGameTime: 45
     _menaceImage: {fileID: 21300000, guid: d151b426d266d404f8a325a86a1140fc, type: 3}
     _cityEffect: {fileID: 1456186750691775880, guid: 5821f2c2888b587409b3ea8afefb487a, type: 3}
