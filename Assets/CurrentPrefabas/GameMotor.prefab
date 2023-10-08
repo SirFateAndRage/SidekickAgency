@@ -100,7 +100,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _heroOnDutyController: {fileID: 401141560290024618}
-  _menaceOutCome: {fileID: 0}
+  _menaceOutCome: {fileID: 1235646869845785809}
 --- !u!1 &6451925155377843741
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4478df8959d691a4e81c5af1847ae333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lifes: []
+  _lifes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7973907126881488802
 GameObject:
   m_ObjectHideFlags: 0
