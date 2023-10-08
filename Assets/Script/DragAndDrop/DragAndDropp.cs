@@ -29,6 +29,7 @@ namespace DragAndDrop
             Debug.Log("OnBeginDrag");
             _canvasGroup.alpha = .6f;
             _canvasGroup.blocksRaycasts = false;
+            FindObjectOfType<HeroController>().SpawnHero();
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -126,6 +127,7 @@ namespace DragAndDrop
             Hero hero = eventData.pointerDrag.GetComponent<Hero>();
             hero.ReturnToPosition();
             ResetScope();
+
         }
 
         public void OnPointerDown(PointerEventData eventData)

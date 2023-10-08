@@ -22,6 +22,10 @@ namespace Menace
 
         [SerializeField] private TMP_Text _timerText;
 
+        [Header("heromodel")]
+        [SerializeField] private HeroController _heroController;
+        [SerializeField] private Transform _becierTransform;
+
         private float _timeMultiplier =1f;
 
         private IObjectPool _menacePool;
@@ -29,6 +33,8 @@ namespace Menace
         private bool _menaceExist = true;
         private int _currentMenaceIndex = 0;
         private MenaceStructure _currentMenaceStructure;
+
+        private int count;
 
         private void Awake()
         {
@@ -89,9 +95,9 @@ namespace Menace
 
             menaceObject.transform.parent = _WorldSpaceCanvas;
 
-            Transform currentBuilding = _menaceTransforms[0].IconToPlaceMenace;
+            Transform currentBuilding = _menaceTransforms[count].IconToPlaceMenace;
 
-            Transform effectTransfrom = _menaceTransforms[0].PlaceToPutEffect;
+            Transform effectTransfrom = _menaceTransforms[count].PlaceToPutEffect;
 
             GameObject effect = menaceStructure.CityEffect;
 
@@ -107,12 +113,12 @@ namespace Menace
 
 
 
-            _menaceTransforms.RemoveAt(0);
 
             menaceObject.TryGetComponent(out MenaceInitConfigurator configurator);
 
-            configurator.InitIcon(menaceStructure, _camera, currentBuilding,_heroOnDutyController,_menaceOutCome);
+            configurator.InitIcon(menaceStructure, _camera, currentBuilding,_heroOnDutyController,_menaceOutCome,_heroController,currentEffect.transform.position,_becierTransform);
 
+            count++;
         }
 
         public void SuperTime()
