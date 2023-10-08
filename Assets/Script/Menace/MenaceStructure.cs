@@ -13,6 +13,8 @@ namespace Menace
         [SerializeField] private float _menaceMultiplicator;
         [SerializeField] private float _menaceGameTime;
         [SerializeField] private Sprite _menaceImage;
+        [Header("GameObject MUST BE OFF")]
+        [SerializeField] private GameObject _cityEffect;
 
         public MenaceType MenaceType { get => _menaceType;}
         public float StartingTime { get => _startingTime;}
@@ -20,6 +22,7 @@ namespace Menace
         public float MenaceGameTime { get => _menaceGameTime;}
         public int Id { get => _id;}
         public Sprite MenaceSprite { get => _menaceImage;}
+        public GameObject CityEffect { get => _cityEffect;}
     }
 
 }

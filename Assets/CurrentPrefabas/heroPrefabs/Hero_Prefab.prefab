@@ -110,6 +110,8 @@ MonoBehaviour:
   _configuration: {fileID: 11400000, guid: c244b7dfc68400544a70bb080994c557, type: 2}
   _heroDataConfig: {fileID: 11400000, guid: 40ba0287ff9863b4ab0efa67a385e828, type: 2}
   _canvasGroup: {fileID: 7448974779014781747}
+  _myRectTransform: {fileID: 6118705370027274316}
+  _mySpaceRectTransform: {fileID: 0}
 --- !u!225 &7448974779014781747
 CanvasGroup:
   m_ObjectHideFlags: 0
