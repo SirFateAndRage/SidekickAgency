@@ -14,7 +14,6 @@ namespace Menace
         [SerializeField] private Transform _camera;
 
         [SerializeField] private MenaceRecyclableObject _menaceObject;
-        [SerializeField] private List<Transform> _buildingTransform;
         [SerializeField] private List<MenaceTransform> _menaceTransforms = new List<MenaceTransform>();
         [SerializeField] private HeroOnDutyController _heroOnDutyController;
         [SerializeField] private MenaceOutCome _menaceOutCome;
@@ -81,7 +80,7 @@ namespace Menace
 
             GameObject effect = menaceStructure.CityEffect;
 
-            Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom).gameObject.SetActive(true);
+            Instantiate(effect, effectTransfrom.position, Quaternion.identity, effectTransfrom).SetActive(true);
 
 
             _menaceTransforms.RemoveAt(0);
