@@ -47,18 +47,18 @@ public class HeroController : MonoBehaviour
         if(!_heroFollowsMouse)
             return;   
 
-        _hero.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f  - _hero.transform.up * .5f;
+        _hero.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
         _bezierPoint1 = _hero.transform;
     }
 
     IEnumerator HeroAppearSequence()
     {
-        Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f - _hero.transform.up * .5f;
+        Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
         float timeToLerp = 0;
 
         while(Vector3.Distance(_hero.transform.position, clickPoint) > 0)
         {
-            clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward * .8f - _hero.transform.up * .5f;
+            clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
             _hero.transform.position = Vector3.Lerp(_heroSpawnPoint.position, clickPoint, timeToLerp);
             yield return null;
             timeToLerp += Time.deltaTime * 1.5f;
