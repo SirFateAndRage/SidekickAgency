@@ -31,23 +31,26 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Distance: 0.07
     - _Divide: 0.5
     - _HueDistance: 0
     - _Intensity: 0.1
     - _Metallic: 0
-    - _OffsetAdjustment: -0.4
+    - _OffsetAdjustment: -1.08
     - _Power: 2
-    - _ShadowLines: 10
+    - _ShadowLines: 120
     - _Smoothness: 0
     - _StitchWorldSpace: 0
     - _Tiling: 3
     m_Colors:
-    - _Color: {r: 0.52156866, g: 0.6840862, b: 0.74509805, a: 0}
-    - _ColorB: {r: 0.52156866, g: 0.6387136, b: 0.74509805, a: 0}
+    - _Color: {r: 0.52156866, g: 0.6236579, b: 0.74509805, a: 0}
+    - _ColorB: {r: 0.49411765, g: 0.6653063, b: 0.7058824, a: 1}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}
-    - _ScreenSpaceTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Origin: {r: 0.03, g: 0, b: 0, a: 0}
+    - _ScreenSpaceTiling: {r: -1, g: 0.8, b: 0, a: 0}
+    - _SecondaryWindowsColor: {r: 0.85490197, g: 1, b: 1, a: 1}
     - _ShadowMinMax: {r: 0.5, g: 1, b: 0, a: 0}
-    - _WindowsColor: {r: 1, g: 0.94962454, b: 0.4575472, a: 0}
+    - _WindowsColor: {r: 0.7, g: 0.9461538, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4054408009494101446
 MonoBehaviour:
