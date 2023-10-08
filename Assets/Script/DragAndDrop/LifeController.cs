@@ -18,16 +18,18 @@ namespace DragAndDrop
         }
         public void RemoveLife()
         {
-            if (_count <= 0)
+            if (_count < 0)
                 return;
 
             _lifes[_count].enabled = false;
-            _count--;
 
-            if(_count<= 0)
+            if (_count <= 0)
             {
                 _badEndGame.SetActive(true);
             }
+
+            _count--;
+
         }
 
         public void Win()
