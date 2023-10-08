@@ -1197,6 +1197,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1458163832}
     - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
+      propertyPath: _timerText
+      value: 
+      objectReference: {fileID: 111920706}
+    - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _WorldSpaceCanvas
       value: 
       objectReference: {fileID: 729058716}
@@ -1596,6 +1600,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f4b5a662fff69b645bfcb3db6c24d705, type: 3}
   m_PrefabInstance: {fileID: 104756547}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &111920706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5745676970133787716, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+  m_PrefabInstance: {fileID: 1504186158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &117915139 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3988880852719127992, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
@@ -5238,6 +5253,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c68363d013251f459e777bb794878c4, type: 3}
+--- !u!114 &605897115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
+  m_PrefabInstance: {fileID: 81411190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa62ee6349a741c4abbe7a147eb75767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &607001858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12024,6 +12050,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 690591265240938604, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 605897115}
+    - target: {fileID: 690591265240938604, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 690591265240938604, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menace.MenaceConfigurationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 690591265240938604, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1572493989508869739, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12095,6 +12137,22 @@ PrefabInstance:
     - target: {fileID: 6880405160353198749, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475971277869041186, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 605897115}
+    - target: {fileID: 7475971277869041186, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SuperTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475971277869041186, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Menace.MenaceConfigurationManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475971277869041186, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7901540614446695668, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_AnchorMax.y

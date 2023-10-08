@@ -1,6 +1,8 @@
 ﻿using DragAndDrop;
 using ObjectPool;
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Menace
@@ -18,6 +20,10 @@ namespace Menace
         [SerializeField] private HeroOnDutyController _heroOnDutyController;
         [SerializeField] private MenaceOutCome _menaceOutCome;
 
+        [SerializeField] private TMP_Text _timerText;
+
+        private float _timeMultiplier =1f;
+
         private IObjectPool _menacePool;
         private float _menaceTimeSpawner;
         private bool _menaceExist = true;
@@ -28,6 +34,7 @@ namespace Menace
         {
             SetCurrentMenace();
             _menacePool = new ObjectPool.ObjectPool(_menaceObject);
+            _timerText.text = _levelTime.ToString();
         }
 
         private void Start()
@@ -50,12 +57,20 @@ namespace Menace
 
         private void Update()
         {
+            _levelTime -= Time.deltaTime * _timeMultiplier;
+
+            TimeSpan time = TimeSpan.FromSeconds(_levelTime);
+
+            // Formatear el tiempo a minutos y segundos
+            _timerText.text = string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
+  
+
             if (!_menaceExist)
                 return;
             if (_levelTime <= 0)
                 return;
 
-            _levelTime -= Time.deltaTime;
+
 
             if (_levelTime <= _currentMenaceStructure.MenaceGameTime)
             {
@@ -89,6 +104,16 @@ namespace Menace
 
             configurator.InitIcon(menaceStructure, _camera, currentBuilding,_heroOnDutyController,_menaceOutCome);
 
+        }
+
+        public void SuperTime()
+        {
+            _timeMultiplier = 2f;
+        }
+
+        public void ResetSpeed()
+        {
+            _timeMultiplier = 1f;
         }
     }
 
