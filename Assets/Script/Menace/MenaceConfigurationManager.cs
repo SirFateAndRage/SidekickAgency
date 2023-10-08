@@ -31,6 +31,7 @@ namespace Menace
 
         [SerializeField] private MenaceRecyclableObject _menaceObject;
         [SerializeField] private List<MenaceTransform> _menaceTransforms = new List<MenaceTransform>();
+        [SerializeField] private List<HeroActivation> _heroActivation;
         [SerializeField] private HeroOnDutyController _heroOnDutyController;
         [SerializeField] private MenaceOutCome _menaceOutCome;
 
@@ -45,14 +46,19 @@ namespace Menace
         private IObjectPool _menacePool;
         private float _menaceTimeSpawner;
         private bool _menaceExist = true;
+        private bool _heroExist = true;
         private int _currentMenaceIndex = 0;
+        private int _currentHeroIndex = 0;
         private MenaceStructure _currentMenaceStructure;
+
+        private GameObject _heroObject;
 
         private int count;
 
         private void Awake()
         {
             SetCurrentMenace();
+            SetCurrentHeroActive();
             _menacePool = new ObjectPool.ObjectPool(_menaceObject);
             _timerText.text = _levelTime.ToString();
         }
@@ -60,6 +66,21 @@ namespace Menace
         private void Start()
         {
             //SpawnObject(_currentMenaceStructure);
+        }
+        private float _spawnHeroTime;
+        public void SetCurrentHeroActive()
+        {
+            if(_currentHeroIndex < _heroActivation.Count)
+            {
+                _heroObject = _heroActivation[_currentHeroIndex].HeroContainer;
+                _spawnHeroTime = _heroActivation[_currentHeroIndex].TimeToShow1;
+                _currentHeroIndex++;
+                return;
+
+            }
+
+            _heroExist = !_heroExist;
+
         }
 
         private void SetCurrentMenace()
@@ -83,7 +104,13 @@ namespace Menace
 
             // Formatear el tiempo a minutos y segundos
             _timerText.text = string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
-  
+
+            if (_levelTime <=_spawnHeroTime && _heroExist)
+            {
+                _heroObject.SetActive(true);
+                SetCurrentHeroActive();
+            }
+
 
             if (!_menaceExist)
                 return;
