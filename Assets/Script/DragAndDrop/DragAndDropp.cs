@@ -129,7 +129,7 @@ namespace DragAndDrop
                 }
                 else
                 {
-                    dropHandler.OnDrop(null);
+                    _heroController.TurnOffHero();
                 }
             }
 
