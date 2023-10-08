@@ -34,6 +34,7 @@ namespace DragAndDrop
             _menaceIcon.OnNoHero();
 
             _menaceIconFill.SetFillSpeed(_menaceStructure.MenaceMultiplicator);
+            _menaceIcon.OnWorkingHeroe(_menaceStructure.MenaceSprite);
         }
 
         public void ChangeHero(Hero hero)
@@ -41,29 +42,32 @@ namespace DragAndDrop
             if (_hero == hero)
                 return;
 
-            if(_hero == null)
-            {
-                _hero = hero;
-                _hero.Workinghero(true);
-                return;
-            }
+            //if(_hero == null)
+            //{
+            //    _hero = hero;
+            //    _hero.Workinghero(true);
+            //    _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
+            //    return;
+            //}
 
-            if(_hero != hero)
-            {
-                _hero.Workinghero(false);
-                _hero = hero;
-                _hero.Workinghero(true);
-            }
+            Debug.Log("ENTRE EN ESTO?");
+
+            _hero.Workinghero(false);
+            _hero = hero;
+            _hero.Workinghero(true);
+
 
             _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
-     
+
         }
 
         public void AddHero(Hero hero)
         {
-            if(_hero == null)
-                _hero = hero;
-
+            if(_hero != null)
+            {
+                _hero.Workinghero(false);
+            }
+            _hero = hero;
             _hero.Workinghero(true);
             _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
 
