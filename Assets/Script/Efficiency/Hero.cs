@@ -11,6 +11,8 @@ namespace Heroes
         [SerializeField] private HeroEfficiencyConfiguration _configuration;
         [SerializeField] private HeroDataConfiguration _heroDataConfig;
         [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private Transform _myRectTransform;
+        [SerializeField] private Transform _mySpaceRectTransform;
         private List<IEffiency> _heroEffeciency;
         private bool _isWorking;
 
@@ -22,6 +24,7 @@ namespace Heroes
         private void Awake()
         {
             _heroEffeciency = _configuration.GetEfficiencyList();
+            ReturnToPosition();
         }
 
         public void Workinghero(bool isWorking)
@@ -35,6 +38,13 @@ namespace Heroes
             }
 
             _canvasGroup.alpha = 1f;
+        }
+
+        public void ReturnToPosition()
+        {
+            _myRectTransform.position = _mySpaceRectTransform.position;
+            Workinghero(_isWorking);
+
         }
 
     }

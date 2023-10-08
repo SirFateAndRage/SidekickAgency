@@ -18,6 +18,7 @@ namespace DragAndDrop
                 Hero hero = eventData.pointerDrag.GetComponent<Hero>();
 
                 _initializeMenace.InitHeroJob(hero);
+                hero.ReturnToPosition();
 
             }
 

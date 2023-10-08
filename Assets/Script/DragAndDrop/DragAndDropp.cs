@@ -122,6 +122,9 @@ namespace DragAndDrop
                 }
             }
 
+
+            Hero hero = eventData.pointerDrag.GetComponent<Hero>();
+            hero.ReturnToPosition();
             ResetScope();
         }
 
