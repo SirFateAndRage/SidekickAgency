@@ -60,5 +60,33 @@ MonoBehaviour:
     _startingTime: 50
     _menaceMultiplicator: 5
     _menaceGameTime: 80
-    _menaceImage: {fileID: 21300000, guid: 5b9ba5c178496ad4983ecf70fda2f972, type: 3}
+    _menaceImage: {fileID: 21300000, guid: d151b426d266d404f8a325a86a1140fc, type: 3}
+    _cityEffect: {fileID: 1456186750691775880, guid: 5821f2c2888b587409b3ea8afefb487a, type: 3}
+  - _id: 8
+    _menaceType: 6
+    _startingTime: 40
+    _menaceMultiplicator: 3
+    _menaceGameTime: 70
+    _menaceImage: {fileID: 21300000, guid: 6974b215a0e771245ab2a1d1dcf646c4, type: 3}
+    _cityEffect: {fileID: 3899098015164778246, guid: fd3df35454b32d0499e7178d216e87b1, type: 3}
+  - _id: 9
+    _menaceType: 5
+    _startingTime: 20
+    _menaceMultiplicator: 4
+    _menaceGameTime: 60
+    _menaceImage: {fileID: 21300000, guid: 1f2f8609c22efff41a8ad4a0e03f92e9, type: 3}
+    _cityEffect: {fileID: 919132149155446097, guid: 0e858dc44083bdf4e861d6cc94cf26c1, type: 3}
+  - _id: 10
+    _menaceType: 2
+    _startingTime: 40
+    _menaceMultiplicator: 3
+    _menaceGameTime: 55
+    _menaceImage: {fileID: 21300000, guid: 258c868672e4aae4ab4209ffa91c2011, type: 3}
+    _cityEffect: {fileID: 9027104787101451504, guid: 2fee17b6ca173944e83aec02ed1b2a65, type: 3}
+  - _id: 11
+    _menaceType: 4
+    _startingTime: 40
+    _menaceMultiplicator: 3
+    _menaceGameTime: 48
+    _menaceImage: {fileID: 21300000, guid: d151b426d266d404f8a325a86a1140fc, type: 3}
     _cityEffect: {fileID: 1456186750691775880, guid: 5821f2c2888b587409b3ea8afefb487a, type: 3}
