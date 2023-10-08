@@ -29,5 +29,5 @@ MonoBehaviour:
     _efficiencyModificator: 0
     _isKnowed: 0
   - _menaceType: 6
-    _efficiencyModificator: -2
+    _efficiencyModificator: -4
     _isKnowed: 0
