@@ -13,6 +13,7 @@ namespace DragAndDrop
         private float _menaceMultiplicator;
         private float _currentModifier;
         private CancellationTokenSource _cancellationToken;
+        private MenaceOutCome _menaceOutCome;
 
         public void InitFillAmount(float menaceMultiplicator)
         {
@@ -23,6 +24,7 @@ namespace DragAndDrop
         public void Reset()
         {
             _fillImage.fillAmount = 0;
+            CancelTask();
         }
 
         public void SetFillSpeed(float menaceMultiplicator)
@@ -37,7 +39,7 @@ namespace DragAndDrop
 
         }
 
-        private void CancelTask()
+        public void CancelTask()
         {
             if(_cancellationToken != null)
             _cancellationToken.Cancel();

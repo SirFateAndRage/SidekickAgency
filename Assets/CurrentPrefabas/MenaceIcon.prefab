@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 6607585211420864483}
-  _menaceIcon: {fileID: 0}
+  _menaceIcon: {fileID: 5854580298774811859}
   _initializeMenace: {fileID: 4496703687169963406}
 --- !u!65 &6081519498841760432
 BoxCollider:

@@ -68,5 +68,11 @@ namespace DragAndDrop
             _menaceIcon.OnWorkingHeroe(_hero.HeroDataConfig.Image);
 
         }
+
+        public void EndedTask()
+        {
+            _hero.Workinghero(false);
+            _hero = null;
+        }
     }
 }
