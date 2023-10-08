@@ -1484,7 +1484,7 @@ PrefabInstance:
     - target: {fileID: 3477281365891393197, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _lifes.Array.data[0]
       value: 
-      objectReference: {fileID: 359654959}
+      objectReference: {fileID: 359654957}
     - target: {fileID: 3477281365891393197, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _lifes.Array.data[1]
       value: 
@@ -1492,7 +1492,7 @@ PrefabInstance:
     - target: {fileID: 3477281365891393197, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _lifes.Array.data[2]
       value: 
-      objectReference: {fileID: 359654957}
+      objectReference: {fileID: 359654959}
     - target: {fileID: 6451925155377843741, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: m_Name
       value: GameMotor
@@ -13832,6 +13832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenSpace_canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3661217207682967724, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4052169704365919861, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -14127,6 +14131,10 @@ PrefabInstance:
     - target: {fileID: 8752000287256540813, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_Padding.m_Bottom
       value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864073380931021675, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8896239095677598999, guid: b587216e41ad2a1418bedc35a488e048, type: 3}
       propertyPath: m_Name
