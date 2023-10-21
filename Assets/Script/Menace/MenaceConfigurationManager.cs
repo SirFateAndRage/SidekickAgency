@@ -171,6 +171,7 @@ namespace Menace
             GameObject menaceObject = _menacePool.GetGameObject();
 
             menaceObject.transform.parent = _WorldSpaceCanvas;
+            //menaceObject.transform.rotation = _WorldSpaceCanvas.rotation;
 
             Transform currentBuilding = _menaceTransforms[count].IconToPlaceMenace;
 

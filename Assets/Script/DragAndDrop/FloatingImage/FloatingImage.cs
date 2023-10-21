@@ -10,8 +10,10 @@ namespace Menace
         public void ConfigureFloatingImage(Transform cameraTransform, Transform buildingTransform)
         {
             transform.position = buildingTransform.position + _offSett;
+            
 
             transform.LookAt(cameraTransform);
+            transform.Rotate(Vector3.up, 180);
         }
 
         public void Reset()
