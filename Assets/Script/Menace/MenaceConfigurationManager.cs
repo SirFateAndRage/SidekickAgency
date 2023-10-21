@@ -99,29 +99,27 @@ namespace Menace
 
         private void Update()
         {
-            _levelTime -= Time.deltaTime * _timeMultiplier;
+            _levelTime = Mathf.Max(0, _levelTime - Time.deltaTime * _timeMultiplier);
 
             TimeSpan time = TimeSpan.FromSeconds(_levelTime);
 
-            // Formatear el tiempo a minutos y segundos
             _timerText.text = string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
 
-            if (_levelTime <=_spawnHeroTime && _heroExist)
+            if (_levelTime <= 0)
+            {
+                _lifeController.GameCondition();
+                return;
+            }
+
+
+            if (_levelTime <= _spawnHeroTime && _heroExist)
             {
                 _heroObject.SetActive(true);
                 SetCurrentHeroActive();
             }
 
-
-            if (_levelTime <= 0)
-            {
-                _lifeController.Win();
-                return;
-            }
             if (!_menaceExist)
                 return;
-
-
 
             if (_levelTime <= _currentMenaceStructure.MenaceGameTime)
             {
@@ -130,6 +128,40 @@ namespace Menace
                 SpawnObject(current);
             }
         }
+
+        //private void Update()
+        //{
+        //    _levelTime -= Time.deltaTime * _timeMultiplier;
+
+        //    TimeSpan time = TimeSpan.FromSeconds(_levelTime);
+
+        //    // Formatear el tiempo a minutos y segundos
+        //    _timerText.text = string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
+
+        //    if (_levelTime <=_spawnHeroTime && _heroExist)
+        //    {
+        //        _heroObject.SetActive(true);
+        //        SetCurrentHeroActive();
+        //    }
+
+
+        //    if (_levelTime <= 0)
+        //    {
+        //        _lifeController.Win();
+        //        return;
+        //    }
+        //    if (!_menaceExist)
+        //        return;
+
+
+
+        //    if (_levelTime <= _currentMenaceStructure.MenaceGameTime)
+        //    {
+        //        MenaceStructure current = _currentMenaceStructure;
+        //        SetCurrentMenace();
+        //        SpawnObject(current);
+        //    }
+        //}
 
 
 

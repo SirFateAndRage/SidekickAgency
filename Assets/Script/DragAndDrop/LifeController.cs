@@ -14,28 +14,29 @@ namespace DragAndDrop
 
         private void Awake()
         {
-            _count = _lifes.Count -1;
+            _count = _lifes.Count;
         }
         public void RemoveLife()
         {
             if (_count < 0)
                 return;
 
-            _lifes[_count].enabled = false;
-
-            if (_count <= 0)
-            {
-                _badEndGame.SetActive(true);
-            }
+            _lifes[_count -1].enabled = false;
 
             _count--;
 
+            if(_count == 0)
+                GameCondition();
         }
 
-        public void Win()
+        public void GameCondition()
         {
             if (_count <= 0)
+            {
+                _badEndGame.SetActive(true);
                 return;
+            }
+
             _winGame.SetActive(true);
         }
     }
