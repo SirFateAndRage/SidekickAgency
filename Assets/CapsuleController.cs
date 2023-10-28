@@ -41,7 +41,7 @@ public class CapsuleController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        timeToLerp += Time.deltaTime * 0.4f;
+        timeToLerp += Time.deltaTime * 0.8f;
         Vector3 m1 = Vector3.Lerp(_cannonPosition.position, _controlPoint, timeToLerp);
         Vector3 m2 = Vector3.Lerp(_controlPoint, _currentEndCurve, timeToLerp);
         gameObject.transform.LookAt(Vector3.Lerp(m1, m2, timeToLerp));
