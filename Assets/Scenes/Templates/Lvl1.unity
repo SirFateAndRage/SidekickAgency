@@ -2705,6 +2705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeroCapsule
       objectReference: {fileID: 0}
+    - target: {fileID: 2312055234638868546, guid: 314b097aafcaa03418b5ac6873ddae31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3124866269749914360, guid: 314b097aafcaa03418b5ac6873ddae31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3636,7 +3640,7 @@ MonoBehaviour:
   _bezierPoint2: {fileID: 1661181660}
   _bezierPoint3: {fileID: 2005502991}
   _cannonAnimator: {fileID: 1233753479}
-  _capsule: {fileID: 1083526254}
+  _capsule: {fileID: 1083526259}
   _cannonPoint: {fileID: 306088186}
   _particle: {fileID: 685206562}
   _audioSource: {fileID: 1083526258}
