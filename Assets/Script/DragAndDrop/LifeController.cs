@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace DragAndDrop
@@ -21,12 +22,14 @@ namespace DragAndDrop
             if (_count < 0)
                 return;
 
-            _lifes[_count -1].enabled = false;
-
+            _lifes[_count - 1].GetComponentInParent<Animator>().SetTrigger("LifeOff");
+            //_lifes[_count -1].enabled = false;
             _count--;
 
-            if(_count == 0)
+            if (_count == 0)
                 GameCondition();
+           // Invoke("DisableObject", .5f);
+
         }
 
         public void GameCondition()
@@ -38,6 +41,13 @@ namespace DragAndDrop
             }
 
             _winGame.SetActive(true);
+        }
+
+        public void DisableObject()
+        {
+            _lifes[_count - 1].enabled = false;
+            if (_count == 0)
+                GameCondition();
         }
     }
 }
