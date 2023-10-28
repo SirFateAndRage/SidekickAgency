@@ -9,31 +9,56 @@ public class HeroController : MonoBehaviour
 {
     [SerializeField] GameObject _hero;
     [SerializeField] Transform _heroSpawnPoint;
-    [SerializeField] Transform _bezierPoint1;
-    [SerializeField] Transform _bezierPoint2;
-    [SerializeField] Transform _bezierPoint3;
     [SerializeField] Animator _cannonAnimator;
     [SerializeField] CapsuleController _capsule;
     [SerializeField] Transform _cannonPoint;
-    [SerializeField] ParticleSystem _particle;
-    [SerializeField] AudioSource _audioSource;
-    public float height = 20f;
+    [SerializeField] Transform _heroSpawn;
+    [SerializeField] Transform _initialHeroSpawn;
 
-    bool _heroFollowsMouse = false;
+    private float _speed = 1f;
 
     public void SpawnHero()
     {
-        //_hero.SetActive(true);
-        //_hero.transform.position = _heroSpawnPoint.position;
-        //_hero.GetComponent<Animator>().Play("Flying");
-
-        //StopAllCoroutines();
-        //StartCoroutine(HeroAppearSequence());
+        _cannonAnimator.SetTrigger("Fly");
+        StopAllCoroutines();
+        StartCoroutine(GoToPosition());
     }
+
+    private IEnumerator GoToPosition()
+    {
+        float distance = Vector3.Distance(_hero.transform.position, _heroSpawn.position);
+
+        float duration = distance / _speed;
+
+        float elapsedTime = 0;
+        while(elapsedTime < duration)
+        {
+            _hero.transform.position = Vector3.Lerp(_hero.transform.position, _heroSpawn.transform.position, elapsedTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        _hero.transform.position = _heroSpawn.transform.position;
+    }
+
+    private IEnumerator GoToReturnTO()
+    {
+        float distance = Vector3.Distance(_initialHeroSpawn.position, _hero.transform.position);
+
+        float duration = distance / _speed;
+
+        float elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            _hero.transform.position = Vector3.Lerp(_hero.transform.position, _initialHeroSpawn.position, elapsedTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        _hero.transform.position = _initialHeroSpawn.position;
+    }
+
 
     public void SendHero()
     {
-        _heroFollowsMouse = false;
         _cannonAnimator.SetTrigger("Shoot");
     }
 
@@ -43,41 +68,29 @@ public class HeroController : MonoBehaviour
         current.InitiCapsule();
     }
 
-    public void TurnOffHero()
+    public void Return()
     {
-        _heroFollowsMouse = false;
+       
+        _cannonAnimator.SetTrigger("Fly");
+        StartCoroutine(GoToReturnTO());
     }
 
 
 
-    IEnumerator HeroAppearSequence()
-    {
-        Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
-        float timeToLerp = 0;
-
-        while(Vector3.Distance(_hero.transform.position, clickPoint) > 0)
-        {
-            clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
-            _hero.transform.position = Vector3.Lerp(_heroSpawnPoint.position, clickPoint, timeToLerp);
-            yield return null;
-            timeToLerp += Time.deltaTime * 1.5f;
-        }
-
-        _heroFollowsMouse = true;
-        _hero.GetComponent<Animator>().Play("Idle");
-    }
-
-    //IEnumerator HeroLeaveSequence()
+    //IEnumerator HeroAppearSequence()
     //{
-    //    Vector3 heroLastPos = _hero.transform.position;
+    //    Vector3 clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
     //    float timeToLerp = 0;
 
-    //    while(Vector3.Distance(_hero.transform.position, _heroSpawnPoint.position) > .5f)
+    //    while(Vector3.Distance(_hero.transform.position, clickPoint) > 0)
     //    {
-    //        _hero.transform.position = Vector3.Lerp(heroLastPos, _heroSpawnPoint.position, timeToLerp);
+    //        clickPoint = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
+    //        _hero.transform.position = Vector3.Lerp(_heroSpawnPoint.position, clickPoint, timeToLerp);
     //        yield return null;
-    //        timeToLerp += Time.deltaTime;
+    //        timeToLerp += Time.deltaTime * 1.5f;
     //    }
-    //}
 
+    //    _heroFollowsMouse = true;
+    //    _hero.GetComponent<Animator>().Play("Idle");
+    //}
 }

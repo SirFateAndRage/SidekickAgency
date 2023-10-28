@@ -24,12 +24,8 @@ namespace DragAndDrop
         private HashSet<IScope> _scopeList = new HashSet<IScope>();
         private IScope _currentScope;
         private IEffectiveEmotes _effectiveEmotes;
-        HeroController _heroController;
+        [SerializeField]HeroController _heroController;
 
-        private void Awake()
-        {
-            _heroController = FindObjectOfType<HeroController>();
-        }
         public void OnBeginDrag(PointerEventData eventData)
         {
             Debug.Log("OnBeginDrag");
@@ -127,16 +123,14 @@ namespace DragAndDrop
                     // Llama a la función de drop
                     dropHandler.OnDrop(eventData);
                 }
-                else
-                {
-                    _heroController.TurnOffHero();
-                }
+
 
             }
             else
             {
-                _heroController.TurnOffHero();
+                _heroController.Return();
             }
+
 
 
             Hero hero = eventData.pointerDrag.GetComponent<Hero>();

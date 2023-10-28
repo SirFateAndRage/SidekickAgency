@@ -40,8 +40,6 @@ namespace DragAndDrop
 
             }
 
-            _heroController.TurnOffHero();
-
         }
     }
 }
