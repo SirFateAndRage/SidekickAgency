@@ -75,6 +75,9 @@ namespace DragAndDrop
 
         public void EndedTask()
         {
+            if (null == _hero)
+                return;
+
             _hero.Workinghero(false);
             _hero = null;
         }

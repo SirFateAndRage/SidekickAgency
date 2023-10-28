@@ -3405,7 +3405,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3835,7 +3835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1251341282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   _bezierPoint2: {fileID: 1661181660}
   _bezierPoint3: {fileID: 2005502991}
   _cannonAnimator: {fileID: 1233753479}
-  _capsule: {fileID: 1083526254}
+  _capsule: {fileID: 1083526259}
   _cannonPoint: {fileID: 306088186}
   _particle: {fileID: 0}
   _audioSource: {fileID: 0}

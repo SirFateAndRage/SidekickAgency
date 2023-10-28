@@ -46,19 +46,9 @@ public class HeroController : MonoBehaviour
     public void TurnOffHero()
     {
         _heroFollowsMouse = false;
-        
-        StopAllCoroutines();
-        StartCoroutine(HeroLeaveSequence());
     }
 
-    void Update() 
-    {
-        if(!_heroFollowsMouse)
-            return;   
 
-        _hero.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, .5f)) + _hero.transform.forward - _hero.transform.up * .8f;
-        _bezierPoint1 = _hero.transform;
-    }
 
     IEnumerator HeroAppearSequence()
     {
@@ -77,17 +67,17 @@ public class HeroController : MonoBehaviour
         _hero.GetComponent<Animator>().Play("Idle");
     }
 
-    IEnumerator HeroLeaveSequence()
-    {
-        Vector3 heroLastPos = _hero.transform.position;
-        float timeToLerp = 0;
+    //IEnumerator HeroLeaveSequence()
+    //{
+    //    Vector3 heroLastPos = _hero.transform.position;
+    //    float timeToLerp = 0;
 
-        while(Vector3.Distance(_hero.transform.position, _heroSpawnPoint.position) > .5f)
-        {
-            _hero.transform.position = Vector3.Lerp(heroLastPos, _heroSpawnPoint.position, timeToLerp);
-            yield return null;
-            timeToLerp += Time.deltaTime;
-        }
-    }
+    //    while(Vector3.Distance(_hero.transform.position, _heroSpawnPoint.position) > .5f)
+    //    {
+    //        _hero.transform.position = Vector3.Lerp(heroLastPos, _heroSpawnPoint.position, timeToLerp);
+    //        yield return null;
+    //        timeToLerp += Time.deltaTime;
+    //    }
+    //}
 
 }
