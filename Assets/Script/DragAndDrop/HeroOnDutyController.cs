@@ -57,5 +57,19 @@ namespace DragAndDrop
             jobToremove.EndedTask();
             _jobInProgress.Remove(jobToremove);
         }
+
+        public Hero GetheroFromJob(int id)
+        {
+            foreach (var item in _jobInProgress)
+            {
+                if (item.Id != id)
+                    continue;
+
+                return item.Hero;
+
+            }
+
+            return null;
+        }
     }
 }

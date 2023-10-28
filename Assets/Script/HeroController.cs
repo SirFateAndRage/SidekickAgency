@@ -12,26 +12,35 @@ public class HeroController : MonoBehaviour
     [SerializeField] Transform _bezierPoint1;
     [SerializeField] Transform _bezierPoint2;
     [SerializeField] Transform _bezierPoint3;
+    [SerializeField] Animator _cannonAnimator;
+    [SerializeField] CapsuleController _capsule;
+    [SerializeField] Transform _cannonPoint;
+    [SerializeField] ParticleSystem _particle;
+    [SerializeField] AudioSource _audioSource;
+    public float height = 20f;
 
     bool _heroFollowsMouse = false;
 
     public void SpawnHero()
     {
-        _hero.SetActive(true);
-        _hero.transform.position = _heroSpawnPoint.position;
-        _hero.GetComponent<Animator>().Play("Flying");
+        //_hero.SetActive(true);
+        //_hero.transform.position = _heroSpawnPoint.position;
+        //_hero.GetComponent<Animator>().Play("Flying");
 
-        StopAllCoroutines();
-        StartCoroutine(HeroAppearSequence());
+        //StopAllCoroutines();
+        //StartCoroutine(HeroAppearSequence());
     }
 
     public void SendHero()
     {
         _heroFollowsMouse = false;
-        _hero.GetComponent<Animator>().Play("Flying");
+        _cannonAnimator.SetTrigger("Shoot");
+    }
 
-        StopAllCoroutines();
-        StartCoroutine(HeroTravelSequence());
+    public void VFX()
+    {
+       CapsuleController current = Instantiate(_capsule);
+        current.InitiCapsule();
     }
 
     public void TurnOffHero()
@@ -81,23 +90,4 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    IEnumerator HeroTravelSequence()
-    {
-        Camera.main.transform.DOShakePosition(.5f, 1, 5, 45, false, true, ShakeRandomnessMode.Harmonic);
-        float timeToLerp = 0;
-
-        _hero.GetComponent<AudioSource>().Play();
-
-        List<Transform> allBeziers = new List<Transform> { _bezierPoint1, _bezierPoint2, _bezierPoint3 };
-
-
-        while(Vector3.Distance(_hero.transform.position, _bezierPoint3.position) > .5f)
-        {
-            _hero.transform.position = Vector3.Lerp(Vector3.Lerp(_bezierPoint1.position, _bezierPoint2.position, timeToLerp), Vector3.Lerp(_bezierPoint2.position, _bezierPoint3.position, timeToLerp), timeToLerp);
-            yield return null;
-            timeToLerp += Time.deltaTime * .4f;
-        }
-
-        _hero.SetActive(false);
-    }
 }
