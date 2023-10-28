@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _heroController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1233753481}
     - target: {fileID: 227281639537216892, guid: 7afec61060ad8b54b952cf59ff89db08, type: 3}
       propertyPath: _lifeController
       value: 
@@ -3458,6 +3458,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 705036478}
+    - target: {fileID: 1930861079185617711, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
+      propertyPath: _heroController
+      value: 
+      objectReference: {fileID: 1233753481}
     - target: {fileID: 2475909569196776244, guid: 7c305b03c9f375c4781ed4e7e338055f, type: 3}
       propertyPath: m_Name
       value: Mujer_Siesta
@@ -3752,6 +3756,57 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 715485130}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1251341281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251341283}
+  - component: {fileID: 1251341282}
+  m_Layer: 0
+  m_Name: HeroController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1251341282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251341281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4144a75923067734bbc3b68832fea7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hero: {fileID: 1765375903}
+  _heroSpawnPoint: {fileID: 1640874879}
+  _cannonAnimator: {fileID: 1233753479}
+  _capsule: {fileID: 1083526259}
+  _cannonPoint: {fileID: 306088186}
+  _heroSpawn: {fileID: 1580386619}
+  _initialHeroSpawn: {fileID: 858204229}
+--- !u!4 &1251341283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251341281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.62, y: 6.53, z: 3.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262091967
 GameObject:
@@ -4228,6 +4283,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 705036478}
+    - target: {fileID: 7410583762692170659, guid: 771bd45ab7d67b845afe015ad14dfe5a, type: 3}
+      propertyPath: _heroController
+      value: 
+      objectReference: {fileID: 1233753481}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5495,6 +5554,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 705036478}
+    - target: {fileID: 7410583762692170659, guid: 6694c9358dba42e4abbd98a280efc84e, type: 3}
+      propertyPath: _heroController
+      value: 
+      objectReference: {fileID: 1233753481}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5578,6 +5641,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df0460a525c151444bb5939bdd08a056, type: 3}
+--- !u!1 &1765375903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6207391061795928849, guid: a609e38ca9a0d0f4d843e8de3f3e66d8, type: 3}
+  m_PrefabInstance: {fileID: 955865457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765718485
 GameObject:
   m_ObjectHideFlags: 0
@@ -6433,6 +6501,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 705036478}
+    - target: {fileID: 7496482128146606231, guid: 72d35382a0d78ea41b7233175d22221a, type: 3}
+      propertyPath: _heroController
+      value: 
+      objectReference: {fileID: 1233753481}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6471,6 +6543,7 @@ SceneRoots:
   - {fileID: 1794892930}
   - {fileID: 1867723501}
   - {fileID: 264553325}
+  - {fileID: 1251341283}
   - {fileID: 1502727331}
   - {fileID: 1661181660}
   - {fileID: 2005502991}
