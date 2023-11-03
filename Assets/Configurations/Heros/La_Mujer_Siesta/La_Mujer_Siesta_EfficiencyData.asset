@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _efficiencylist:
   - _menaceType: 0
-    _efficiencyModificator: 2
+    _efficiencyModificator: 4
     _isKnowed: 0
   - _menaceType: 2
     _efficiencyModificator: 0
     _isKnowed: 1
   - _menaceType: 3
-    _efficiencyModificator: 2
+    _efficiencyModificator: 4
     _isKnowed: 0
   - _menaceType: 4
-    _efficiencyModificator: 2
+    _efficiencyModificator: 4
     _isKnowed: 0
   - _menaceType: 5
     _efficiencyModificator: 0
